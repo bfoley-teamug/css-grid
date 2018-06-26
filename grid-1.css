@@ -1,0 +1,28 @@
+div {
+     background-color: lightgrey;
+}
+
+.container {
+    display: grid;
+    /* 2nd column auto */
+    grid-template-columns: 100px auto 100px;
+    grid-template-rows: 50px 50px;
+    grid-gap: 5px;
+  }
+
+
+.container > div:nth-child(1n) {
+  background-color: green;
+}
+
+.container > div:nth-child(3n) {
+  background-color: blue;
+}
+
+.container > div:nth-child(2n) {
+      background-color: red;
+}
+
+.container > div:nth-child(4n) {
+      background-color: orange;
+}
