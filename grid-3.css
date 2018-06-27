@@ -1,0 +1,40 @@
+/* html
+<div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+*/
+
+
+div {
+     background-color: lightgrey;
+}
+
+.container {
+    display: grid;
+    /* fraction units */
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px 50px;
+    grid-gap: 5px;
+  }
+
+
+.container > div:nth-child(1n) {
+  background-color: green;
+}
+
+.container > div:nth-child(3n) {
+  background-color: yellow;
+}
+
+.container > div:nth-child(2n) {
+      background-color: orange;
+}
+
+.container > div:nth-child(4n) {
+      background-color: red;
+}
