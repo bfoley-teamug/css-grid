@@ -1,0 +1,58 @@
+/*
+<body>
+        <div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </body>
+    */
+
+
+/* responsive minmax */
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+  /*  column minimum 100px, max 1 fraction unit*/
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+html, body {
+  background-color: grey;
+  margin: 10px;
+}
+
+.container > div:nth-child(1n) {
+  background-color: red;
+}
+
+.container > div:nth-child(3n) {
+  background-color: orange;
+}
+
+.container > div:nth-child(2n) {
+      background-color: pink;
+}
+
+.container > div:nth-child(4n) {
+      background-color: green;
+}
