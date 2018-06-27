@@ -1,0 +1,72 @@
+/* html
+
+       <div class="container">
+           <div class="header">Header</div>
+           <div class="menu">Menu</div>
+           <div class="content">Content</div>
+           <div class="footer">Footer</div>
+       </div>
+    
+*/
+
+.container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 200px 40px;
+}
+
+.header {
+   grid-column: 1 / -1;
+   /*
+    -1 spans to the end column line. This is good for headers and footers when you don't know how many columns you'll have in the body
+   this example is the same as
+    grid-column: 1 / 3;
+    and also the same as
+    grid-column-start: 1;
+    grid-column-end: 3;
+  */
+}
+
+.menu {}
+
+.content {
+  grid-column: 2 / -1;
+}
+
+.footer {
+   grid-column: 1 / -1;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+html, body {
+  background-color: grey;
+  margin: 10px;
+}
+
+body {
+  font: normal small-caps normal 12px/1.4 Georgia;
+}
+
+.container > div:nth-child(1n) {
+  background-color: red;
+}
+
+.container > div:nth-child(3n) {
+  background-color: orange;
+}
+
+.container > div:nth-child(2n) {
+      background-color: green;
+}
+
+.container > div:nth-child(4n) {
+      background-color: purple;
+}
